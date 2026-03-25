@@ -221,6 +221,9 @@ CounterFill.paint(document.getElementById('my-word'), FILLS);
     <span class="text">Aperture</span>
   </h1>
 
+  <!-- MULTI-LINE: class="wrap-multi" + unique id — just write the text, no inner markup needed -->
+  <h2 class="wrap-multi heading" id="wm">Golden Baroque Obsidian</h2>
+
   <!-- REQUIRED: load the library -->
   <script src="counter-fill.js"></script>
   <script>
@@ -228,6 +231,7 @@ CounterFill.paint(document.getElementById('my-word'), FILLS);
     document.fonts.ready.then(() => CounterFill.init({
       w1: { stops: ['#f5c842', '#d4820a', '#7a3a08'] }, // YOUR colours
       w2: { stops: ['#e05c5c', '#a01830', '#4a0010'] }, // YOUR colours
+      wm: { stops: ['#f5c842', '#d4820a'] },            // multi-line — same config, JS handles the rest
     }));
   </script>
 </body>
