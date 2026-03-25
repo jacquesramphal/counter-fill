@@ -1,4 +1,4 @@
-# counter-fill
+# Counter Fill: Colouring the Holes in Your Type
 
 Fills the enclosed counter spaces inside letterforms — the holes in **o, e, a, g, d, b, p** — with any colour or gradient.
 
