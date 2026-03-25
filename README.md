@@ -202,27 +202,32 @@ CounterFill.paint(document.getElementById('my-word'), FILLS);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
   <style>
+    /* YOUR styles — nothing here is required by counter-fill */
     body { background: #0e0e0e; display: flex; flex-direction: column; align-items: center; gap: 64px; padding: 80px 32px; }
     .heading { font-family: 'Playfair Display', serif; font-size: clamp(64px, 15vw, 140px); font-weight: 900; color: #f0ece4; }
   </style>
 </head>
 <body>
 
+  <!-- REQUIRED: class="wrap" + unique id + <canvas> + <span class="text"> -->
   <h1 class="wrap heading" id="w1">
     <canvas></canvas>
     <span class="text">Golden</span>
   </h1>
 
+  <!-- Repeat the same structure for each word -->
   <h1 class="wrap heading" id="w2">
     <canvas></canvas>
     <span class="text">Aperture</span>
   </h1>
 
+  <!-- REQUIRED: load the library -->
   <script src="counter-fill.js"></script>
   <script>
+    // REQUIRED: wait for fonts, then init with your colours keyed by element id
     document.fonts.ready.then(() => CounterFill.init({
-      w1: { stops: ['#f5c842', '#d4820a', '#7a3a08'] },
-      w2: { stops: ['#e05c5c', '#a01830', '#4a0010'] },
+      w1: { stops: ['#f5c842', '#d4820a', '#7a3a08'] }, // YOUR colours
+      w2: { stops: ['#e05c5c', '#a01830', '#4a0010'] }, // YOUR colours
     }));
   </script>
 </body>
